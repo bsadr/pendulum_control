@@ -9,7 +9,7 @@ This package simulates an inverted pendulum connected to a motor with a fixed ar
     - `m`: mass of the rod
     - `l`: length of the rod
     - `b`: damping coefficient considered for the angular friction of the rod
-- 'controller': this node controls the pendulum motion usinf a PD controller
+- `controller`: this node controls the pendulum motion usinf a PD controller
     - `Kp`: proportional gain of the controller
     - `Kd`: derivative gain the controller
     - `reference`: reference angle of the rod (default value pi) 
@@ -19,4 +19,4 @@ This package simulates an inverted pendulum connected to a motor with a fixed ar
 No non standard libraries used.
 
 ## Launch:
-'roslaunch pendulum_control pendulum.launch
+`roslaunch pendulum_control pendulum.launch`
