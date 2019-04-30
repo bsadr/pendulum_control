@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<launch>
+	<node name="visualization" pkg="rviz" type="rviz" respawn="false"
+	args="-d $(find pendulum_control)/launch/pendulum.rviz" output="screen">
+  </node>
+	<node pkg="tf" type="static_transform_publisher" name="base_to_world" args="0 0 0 0 0 0 /world /base 30" />
+	<node name="simulator" pkg="pendulum_control" type="simulator">
+		<param name="M" value=".38" type="double"/>
+		<param name="m" value=".095" type="double"/>
+		<param name="l" value=".43" type="double"/>
+		<param name="b" value=".1" type="double"/>
+	</node>
+	<node name="controller" pkg="pendulum_control" type="controller">
+		<param name="Kp" value="2." type="double"/>
+		<param name="Kd" value=".3" type="double"/>
+		<param name="reference" value="3.14159" type="double"/>
+	</node>
+</launch>
