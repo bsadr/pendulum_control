@@ -20,3 +20,8 @@ No non standard libraries used.
 
 ## Launch:
 `roslaunch pendulum_control pendulum.launch`
+
+## Sample:
+<div align="center">
+  <img src="https://github.com/bsadr/pendulum_control/blob/master/sample.GIF"/>
+</div>
